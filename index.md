@@ -1,6 +1,6 @@
 ## XadrezSuíço
 
-Sejam bem-vindos ao (XadrezSuíço)[https://github.com/XadrezSuico/XadrezSuico] - Software de Gerenciamento de Circuitos de Xadrez.
+Sejam bem-vindos ao [XadrezSuíço]([https://github.com/XadrezSuico/XadrezSuico) - Software de Gerenciamento de Circuitos de Xadrez.
 
 O XadrezSuíço nasceu para ser um software de emparceiramento de xadrez, porém, depois de uma série de análises, percebi que o ideal era desenvolver algo para ajudar no pré e pós-evento, recebendo inscrições e também depois efetuando procedimentos gerais sobre o Circuito.
 
