@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+## XadrezSuíço
 
-You can use the [editor on GitHub](https://github.com/XadrezSuico/xadrezsuico.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Sejam bem-vindos ao (XadrezSuíço)[https://github.com/XadrezSuico/XadrezSuico] - Software de Gerenciamento de Circuitos de Xadrez.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+O XadrezSuíço nasceu para ser um software de emparceiramento de xadrez, porém, depois de uma série de análises, percebi que o ideal era desenvolver algo para ajudar no pré e pós-evento, recebendo inscrições e também depois efetuando procedimentos gerais sobre o Circuito.
 
-### Markdown
+Hoje o software está em desenvolvimento ainda, porém, já possui sua maioria de funcionalidades finalizadas e prontas para uso. Caso você seja um desenvolvedor e queira ajudar no projeto, recomendo verificar as [issues](https://github.com/XadrezSuico/XadrezSuico/issues), dar um fork no projeto e começar a trabalhar, estamos ansiosos para receber o seu pull request!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### A história por trás do XadrezSuíço
 
-```markdown
-Syntax highlighted code block
+Bom, preciso personificar um pouco aqui, para deixar mais claro o que acontece neste caso.
+O idealizador do Projeto, João Paulo Polles, é árbitro de Xadrez há mais de 4 anos, e quando o mesmo iniciou a atuar em competições, principalmente como Árbitro Mesa, percebeu que faltava algo para ajudar os árbitros nas competições. Nesta época, o mesmo já fazia o Curso Técnico em Informática e estava o fazendo integrado ao Ensino Médio.
 
-# Header 1
-## Header 2
-### Header 3
+Então surgiu a ideia de tentar modernizar um pouco o uso de softwares pelos árbitros de xadrez, visto que a maioria utilizava-se (e ainda utiliza) do software Swiss Perfect 98, software criado nos anos 90 para gerenciamento de torneios de xadrez. 
 
-- Bulleted
-- List
+O Swiss Perfect 98 até é competente, mas peca em vários quesitos:
+- O software por ser muito antigo, não atende diversos tipos de critérios de desempate atuais, como por exemplo o Confronto Direto;
+- O software não aceita importação de dados de outras fontes;
+- E o principal de todos: até hoje não conheço um árbitro que tenha a licença deste software (SIM! O Swiss Perfect 98 é PAGO!)
 
-1. Numbered
-2. List
+Com isso, veio a ideia de desenvolver um software open-source para gerenciamento de torneios de xadrez, porém a tentativa da execução do mesmo se deu já na Faculdade, mais precisamente na Disciplina de "Projeto Experimental II" do curso de Tecnologia em Análise e Desenvolvimento de Sistemas do Centro Universitário UNIVEL, e tive ajuda de alguns colegas que estavam em meu grupo.
 
-**Bold** and _Italic_ and `Code` text
+Passou-se um tempo, e percebi que não valeria muito a pena o desenvolvimento de um software para isto, e que eu teria outro problema um tanto maior que este: O gerenciamento dos Circuitos de Xadrez. Este problema eu percebi pouco tempo depois do início daquele projeto, e resolvi que era necessário o desenvolver.
 
-[Link](url) and ![Image](src)
-```
+Com isso, no início de 2019 dei início ao projeto que viria a se tornar o XadrezSuíço. E agora, meses depois do início do desenvolvimento decidi que era hora de começar a publicação pública do software.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Algumas possíveis perguntas
 
-### Jekyll Themes
+### Eu posso usar o XadrezSuíço?
+Claro que sim! O código está neste repositório, porém, o mesmo está ainda em desenvolvimento, com algumas funções ainda não funcionando, mas já é possível começar a trabalhar com o mesmo. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/XadrezSuico/xadrezsuico.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Com quais tecnologias o XadrezSuíço trabalha?
+O XadrezSuíço é desenvolvido em PHP com o framework Laravel, podendo ser utilizados vários tipos de bancos de dados, mas o que mais foi focado para o sistema foi o MySQL/MariaDB, que inclusive é o que recomendamos para uso.
 
-### Support or Contact
+### A minha competição utiliza-se dos Ratings FIDE e/ou CBX, vou ter algum problema com isso?
+Não! E isso é uma das coisas mais bacanas deste projeto: ao receber um cadastro com o ID FIDE ou CBX, passado alguns minutos, o mesmo irá importar os ratings para o sistema!
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+IMPORTANTE! Considerando os ratings FIDE e CBX, o XadrezSuíço por enquanto apenas está trabalhando com os Ratings Rápido. Já está na lista fazer atualização no sistema que permita o uso dos Ratings de Blitz e Convencional, mas ainda não está implementado.
+### Mas e a documentação?
+Então, o mesmo ainda está em desenvolvimento, e assim que o mesmo estiver finalizado irei trabalhar em uma documentação explicando alguns conceitos importantes sobre o software.
+
+### E como faço a instalação?
+O software foi desenvolvido em Laravel, então é o mesmo procedimento de qualquer software desenvolvido com o mesmo, porém, irei deixar uma breve descrição aqui:
+- Instalar as dependências do Composer (composer install)
+- Criar um arquivo de variáveis de ambiente (.env) a partir do exemplo (.env.example) e configurar pelo menos as variáveis de banco, email e url do sistema
+- Efetuar a migração do banco de dados (php artisan migrate)
+- Criar a chave do aplicativo (php artisan key:generate)
+- Criar o primeiro usuário (recomendamos usar o comando 'php artisan tinker' para criar este usuário, visto que não é possível criar pelo formulário público) e definir a permissão do mesmo com o Perfil de código 1 (Super-administrador) - Em breve devo fazer uma atualização que já cria um usuário padrão no sistema.
+- Começar a utilizar o sistema!
+
+### E as novas funcionalidades? Como posso sugerir novas?
+Você pode sugerir alterações através das issues! Estaremos "escutando", digamos desta forma.
+
+### Posso ajudar no desenvolvimento do XadrezSuíço?
+CLARO! Faça um fork do projeto e nos ajude a deixar esse projeto ainda com ainda mais funcionalidades!
